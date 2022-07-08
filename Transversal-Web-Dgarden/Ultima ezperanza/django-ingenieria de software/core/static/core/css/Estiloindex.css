@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin:  0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://64.media.tumblr.com/44bcc36dd8b9faa8fd0e4697fdc4b3b5/f5b7b94996793ddb-bc/s500x750/df3cd298ff0a941fe88790a6b56f04f7b19b6007.gifv);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 96%, 0 80%);
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 140px;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #ffff;
+    font-weight: 100;
+}
+
+.bar-btn{
+    font-size: 25px;
+    color: #ffff;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgb(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a{
+    color: #ffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgba(8, 248, 20, 0.877);
+    transition: .3s;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+
+}
+
+.banner-text{
+    padding: 0 30px;
+    margin-top:150px;
+    text-align: center;
+    color: #ffff;
+}
+
+.banner-text h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner-text span{
+    color: rgba(8, 248, 20, 0.877);
+}
+
+.banner-text h2{
+    font-size: 16px;
+    font-weight:600;
+}
+
+.button1 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: rgb(81, 255, 0);
+    color: #ffff;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: #ffff;
+    color: rgba(8, 248, 20, 0.877);
+    transition: .5s;
+}
+
+
+/* ------Productos------ */
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+section h2 {
+    width: 100%;
+    color: rgb(2, 39, 13);
+    font-family: monospace;
+    padding: 60px 0;
+}
+
+.titulo {
+    color: hsl(151, 46%, 31%);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+
+/* ----------- Descuento ------------ */
+.procutos-desc {
+    font-family: sans-serif;
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+.procutos-desc .img-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+
+
+.procutos-desc .img-container img {
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.procutos-desc:hover .img-container img {
+    transform: scale(1.2);
+}
+
+.procutos-desc .img-container .promo {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 17px;
+    background: hsl(103, 100%, 50%);
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.procutos-desc .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.procutos-desc .info-container h3 {
+    margin: 0;
+}
+
+.procutos-desc .info-container h3,
+.procutos-desc .info-container strong,
+.procutos-desc .info-container span {
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.procutos-desc .add-car {
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.procutos-desc .add-car:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+
+/* ------------- Pie de pagina -------------- */
+
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+    text-align: center;
+}
+
+.content-foo h4 {
+    color: #fff;
+    border-bottom: 3px solid #12e7f2;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #ccc;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+
+
+
+/*  ------Resolucion------  */
+
+@media screen and (min-width: 768px){
+    .logo{
+        margin-left: 50px;
+    }
+
+    nav{
+        height: 100px;
+    }
+    
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a{
+        font-size: 12px;
+    }   
+
+    .banner-text h1{
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .procutos-desc .img-container img {
+        position: relative;
+    }
+    .content-foo{
+        margin-right: 10px;
+        font-size: 20x;
+    }
+
+    
+    
+}
+
+
+@media screen and (max-width: 768px){
+
+    .procutos-desc .img-container img {
+        position: relative;
+    }
+
+    .contenedor-footer{
+        position: relative;
+        transition: none;
+    }
+
+    .content-foo{
+        margin-right: 10px;
+        font-size: 20x;
+        
+    }
+    
+    .content-foo img{
+        height: 30px;
+       margin-right: 5px;
+        
+    }
+    .procutos-desc .img-container .promo {
+        position: absolute;
+        font-size: 15px;
+        padding: 8px;
+        border-bottom-right-radius: 13px;
+        border-top-right-radius: 13px;
+    }
+   
+}

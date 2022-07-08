@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/Estilo-carrito-historial.css' %}">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <header>
+        <h1 class="title">D-Garden</h1>
+        <ul class="menu">
+            <li> <a href="CarritoCompras">Volver </a> | </li>
+            <li>
+                <img src="{% static 'core/images/shopping-bag.png' %}" alt="">
+            </li>
+        </ul>
+    </header>
+
+    <div class="content-carrito">
+        <h1>Historial de compras</h1>
+        <div class="datos">
+            <div class="content">
+                <h4>Producto</h4>
+                <div class="Pr">
+                    
+                    <img src="{% static 'core/images/Producto-maceta.png' %}" alt="maceta">
+                    <h4>Maceta $3.000</h4>
+
+                </div>
+
+                    <div class="Pr">
+                        <img src="{% static 'core/images/Producto-tierra.png' %}" alt="maceta">
+                        <h4>Tierra de hojas $10.000</h4>
+    
+                </div>
+
+                
+            </div>
+
+
+            <div class="content">
+                <h4>Cantidad</h4>
+                
+                <h2 class="cant"> 2 </h2>
+
+                <h2 class="cant2"> 6 </h2>
+            </div>
+            <div class="content">
+                <h4 >Total pagado</h4>
+                <h2 class="cant">$6.000 </h2>
+
+                <h2 class="cant2">$60.000 </h2>
+
+            </div>
+        </div>  
+       <div class="totalP" >
+        <h2>$66.000 </h2>
+    </div>
+</div>
+
+    
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Numero</h4>
+                <p>+569 11223344</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>d-garden@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Redes</h4>
+                <p><img src="{% static 'core/images/facebook.png' %}" alt=""> <img src="{% static 'core/images/twitter.png' %}" alt=""> <img src="{% static 'core/images/Instagram.png' %}" alt="">  </p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; DuocUC | D-GARDEN </h2>
+    </footer> 
+</body>
+
+</html>

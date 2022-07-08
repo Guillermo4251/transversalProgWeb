@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario pago</title>
+    <link rel="stylesheet" href="{% static 'core/css/Estilo-pago.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validation/validationForm.js" ></script>
+
+    
+<form onsubmit="return validationPago()" >
+    <div class="container">
+        <h1>Confirma tu pago</h1>
+        <div class="first-row">
+            <div class="propietario">
+                <h3>Nombre del propietario de la tarjeta</h3>
+                <div class="campo-entrada">
+                    <input type="text" id="nombre">
+                </div>
+                <h4 id="mensajeNombrePago"></h4>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="campo-entrada">
+                    <input type="password" id="cvv">
+                    <h4 id="mensajeCvv"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Numero de tarjeta</h3>
+                <div class="campo-entrada">
+                    <input type="number" id="numeroTarjeta">
+                    <h4 id="mensajeTarjeta"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Fecha de vencimiento</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Enero</option>
+                        <option value="Feb">Febrero</option>
+                        <option value="Mar">Marzo</option>
+                        <option value="Apr">Abril</option>
+                        <option value="May">Mayo</option>
+                        <option value="Jun">Junio</option>
+                        <option value="Jul">Julio</option>
+                        <option value="Aug">Agosto</option>
+                        <option value="Sep">Septiembre</option>
+                        <option value="Oct">Octubre</option>
+                        <option value="Nov">Noviembre</option>
+                        <option value="Dec">Diciembre</option>
+                      </select>
+                      <select name="years" id="years">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        
+                      </select>
+                </div>
+                <div class="cards">
+                    <img src="Img/mc.png" alt="">
+                    <img src="Img/vi.png" alt="">
+                    <img src="Img/pp.png" alt="">
+                </div>
+            </div>    
+        </div>
+        <button type="submit" class="btn btn-success btn-lg mb-1">Enviar</button>
+        <a href="Index.html">Cancelar</a>
+     
+    </div>
+</form>
+</body>
+</html>

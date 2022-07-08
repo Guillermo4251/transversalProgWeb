@@ -1,0 +1,59 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crud producto</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{%static 'core/css/crud.css'%}">
+  <body>
+    <div id="barra">
+      <a id="boton" href="{%url 'index'%}"><img src="{%static 'core/images/logo.png'%}" alt="" height="100"></a>
+    </div>
+    
+    <div id="crud">
+      
+      <h5>suscriptores</h5>
+      
+      
+      <table class="table table-hover">
+            <a href="{% url 'crear_producto'%}"><button type="button" class="btn btn-secondary">crear</button></a>
+        <tr>
+            <th>idProducto</th>
+            <th>nombre producto</th>
+            <th>valor</th>
+            <th>stock</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        {% for i in producto %}
+        <tr>
+            <td>{{i.IdProducto}}</td>
+            <td>{{i.NombreProducto}}</td>
+            <td>{{i.Valor}}</td>
+            <td>{{i.stock}}</td>
+            <td>
+                <a href="{% url 'modificar_Producto' i.IdProducto %}">Modificar</a>
+            </td>
+            <td>
+              <a href="{% url 'eliminarProducto' i.IdProducto %}">eliminar</a>
+            </td>
+        </tr>
+    
+        {% endfor %}
+    </table>
+    
+    
+    
+    
+    </div>
+</body>
+</html>

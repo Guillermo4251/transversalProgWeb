@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crud?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="{%static 'core/css/crudCSS.css'%}">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <body>
+
+    <header>
+        <h1 class="title">D-Garden</h1>
+        <a href="{%url 'Index'%}">Volver</a>
+        
+      </header>
+    
+
+
+      <div id="crud">
+
+    
+    
+        <table class="table table-hover">
+            
+        <tr>
+            <th>idpromo</th>
+            <th>nombre</th>
+            <th>descuento</th>
+            <th>producto</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        {% for i in promocion %}
+        <tr>
+            <td>{{i.idpromo}}</td>
+            <td>{{i.nombre}}</td>
+            <td>{{i.descuento}}</td>
+            <td>{{i.idProducto}}</td>
+            <td>
+                <a href="{% url 'modificarSuscriptor' i.idpromo %}">Modificar</a>
+            </td>
+            <td>
+                <a href="{% url 'eliminarPromocion' i.idpromo %}">Eliminar</a>
+            </td>
+        </tr>
+    
+        {% endfor %}
+    </table>
+    
+    
+    
+    
+    </div>
+    <a href="{% url 'crear_promocion'%}" class="bt" ><button type="button" class="btn btn-secondary">crear</button></a> 
+</body>
+
+</html>

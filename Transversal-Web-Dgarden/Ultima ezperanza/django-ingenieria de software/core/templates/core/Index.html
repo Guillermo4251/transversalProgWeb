@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/Estiloindex.css' %}">
+    <script src="https://kit.fontawesome.com/4bed0a9bb5.js" crossorigin="anonymous"></script>
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <!-- Encabezado -->
+        <nav>
+            <div>
+                <img src="{% static 'core/images/logo-agricultura-2.png' %}" alt="logo"class="logo">
+               </div>
+            <input type="checkbox" id="check" >
+            <label for="check" class="bar-btn"> 
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="#">Productos </a> </li>
+                <li><a href="{%url 'InicioSesion'%}  ">Inicio </a> </li>
+                <li><a href="{%url 'Regist'%}  ">Registrarse</a> </li>
+                <li><a href="{%url 'CarritoCompras'%}  ">Carrito</a> </li>
+                <li><a href="{%url 'crud'%}  ">Crud descuentos</a> </li>
+                {%if request.user.is_authenticated %}
+                    <li><a href="{%url 'logout'%}"> Cerrar sesion</a></li>
+                {%endif%}
+                <li><a href="{%url 'crudproductos'%}  ">Crud productos</a> </li>
+            </ul>
+        </nav>
+        <div class="banner-text">
+            <h2>LOS MEJORES PRODUCTOS SON LOS NATURALES </h2>
+            <h1>NUESTROS PRODUCTOS SON DE <span>CALIDAD </span></h1>
+            <div>
+                <a href="{%url 'Suscribirse'%} " class="button1">SUSCRIBIRSE </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Productos -->
+
+    <section>
+        <h2 class="titulo">Productos</h2>
+        
+
+        <div class="card procutos-desc">
+            <a href="#">
+                <div class="img-container">
+                    <img src="{% static 'core/images/Producto-tierra.png' %}" alt="producto 1">
+                    <span class="promo">32 productos restantes</span>
+                </div>
+            </a>
+            <div class="info-container">
+                <h3>Tierra de hojas</h3>
+                <strong>$10.000</strong>
+                <a href="#" class="add-car">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card procutos-desc">
+            <a href="#">
+                <div class="img-container">
+                    
+                    <img src="{% static 'core/images/Producto-maceta.png' %}" alt="producto 2">
+                    <span class="promo">25 productos restantes</span>
+                </div>
+            </a>
+            <div class="info-container">
+                <h3>Macetas</h3>
+                <strong>$3.000</strong>
+                <a href="#" class="add-car">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card procutos-desc">
+            <a href="#">
+                <div class="img-container">
+                    
+                    <img src="{% static 'core/images/Producto-flores.png' %}" alt="producto 3">
+                    <span class="promo">85 productos restantes</span>
+
+                </div>
+            </a>
+            <div class="info-container">
+                <h3>Flores</h3>
+                <strong>$1.500</strong>
+                <a href="#" class="add-car">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card procutos-desc">
+            <a href="#">
+                <div class="img-container">
+                    
+                    <img src="{% static 'core/images/Producto-arbusto.png' %}" alt="producto 4">
+                    <span class="promo">65 productos restantes</span>
+                </div>
+            </a>
+            <div class="info-container">
+                <h3>Arbustos</h3>
+                <strong>$3.500</strong>
+                <a href="#" class="add-car">Añadir al carrito</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Numero</h4>
+                <p>+569 11223344</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>d-garden@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Redes</h4>
+                <p><img src="{% static 'core/images/facebook.png' %}" alt=""> <img src="{% static 'core/images/twitter.png' %}" alt=""> <img src="{% static 'core/images/Instagram.png' %}" alt="">  </p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; DuocUC  | D-GARDEN </h2>
+    </footer> 
+</body>
+</html>
